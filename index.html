@@ -65,8 +65,15 @@
         </div>
 
     <!--Footer Section-->
-    <footer class="footer">
-        <section class="modal-card-body">
+    <button onclick="document.getElementById('theModal').style.display='block'">Open Modal</button>
+    <div class="modal" id="theModal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+          <header class="modal-card-head">
+            <p class="modal-card-title">User Feedback Survey</p>
+            <button class="delete" aria-label="close"></button>
+          </header>
+          <section class="modal-card-body">
             <!-- Content ... -->
             <div class="content has-text-centered">
                 <p>Did our recommendations suit you? Please rate: 1-5 Stars</p>
@@ -103,6 +110,9 @@
                     </form>
             </div>
           </section>
+          </footer>
+        </div>
+      </div>
         <div class="content has-text-centered">
             <h4>Contact Us:</h4>
             <address>
