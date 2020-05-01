@@ -9,13 +9,32 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.0/css/bulma.min.css">
         <link rel="stylesheet" href="">
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        
+        <button onclick="document.getElementById('theModal').style.display='block'">Open Modal</button>
+        <div class="modal" id="theModal">
+            <div class="modal-background"></div>
+            <div class="modal-card">
+              <header class="modal-card-head">
+                <p class="modal-card-title">User Feedback Survey</p>
+                <button class="delete" aria-label="close"></button>
+              </header>
+              <section class="modal-card-body">
+                <!-- Content ... -->
+                <p>Recommendation Algorithm</p>
+                <p>Ease of Use</p>
+              </section>
+              <footer class="modal-card-foot">
+                <button class="button is-success">Submit Survey</button>
+                <button class="button">Cancel Survey</button>
+              </footer>
+            </div>
+          </div>
         <script src="" async defer></script>
     </body>
 </html>
