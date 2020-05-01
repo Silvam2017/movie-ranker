@@ -32,3 +32,16 @@ function test2() {
     .then(data =>
         console.log(data))
 }
+
+
+function test3() {
+    let term = thirdInput.value;
+    fetch('https://itunes.apple.com/search?term=' + term + '&entity=movie')
+    
+    .then(response => response.json())
+    .then(data => {
+        console.log(data)
+        var director =data['results'][0]['artistName']
+        directortestEl.innerHTML = director;
+    });
+    };
