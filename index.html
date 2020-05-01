@@ -2,20 +2,177 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
-    <body>
-        <!--[if lt IE 7]>
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Movie Ranker</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <link rel="stylesheet" href=./movie-ranker/assets/css/style.css>
+</head>
+
+<body>
+    <!--Navigation Bar-->
+    <header>
+        <h1>
+            <nav>
+                <div class="topnav">
+                    <a class="active" href="#home">Movie Ranker</a>
+                    <a href="#movie-search">Movie Search</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#survey">Survey</a>
+                  </div>
+            </nav>
+        </h1>
+    </header>
+    <!--Search Genre Filter Dropdown Menu-->
+    <div>
+        <input class="input is-small" type="text" placeholder="Text input">
+        <input class="button is-small" type="submit" value="Submit">
+    </div>
+
+    <!--Rating Selector-->
+    <form>
+        <p>Please select preferred rating:</p>
+        <input type="radio" id="rating1" name="star" value="1">
+        <label for="rating1">1 STAR</label>
+        <input type="radio" id="rating2" name="star" value="2">
+        <label for="rating2">2 STARS</label>
+        <input type="radio" id="rating3" name="star" value="3">
+        <label for="rating3">3 STARS</label>
+        <input type="radio" id="rating4" name="star" value="4">
+        <label for="rating4">4 STARS</label>
+        <input type="radio" id="rating5" name="star" value="5">
+        <label for="rating5">5 STARS</label>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <!--Movie Grid Columns-->
+    <div class="row">
+        <div class="column">
+          <div class="card">
+            <h3>Title:</h3>
+            <img></img>
+            <p>iTunes Director:</p>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <h3>Title:</h3>
+            <img></img>
+            <p>iTunes Director:</p>
+          </div>
+        </div>
+        
+        <div class="column">
+          <div class="card">
+            <h3>Title:</h3>
+            <img></img>
+            <p>iTunes Director:</p>
+          </div>
+        </div>
+        
+        <div class="column">
+          <div class="card">
+            <h3>Title:</h3>
+            <img></img>
+            <p>iTunes Director:</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <h3>Title:</h3>
+            <img></img>
+            <p>iTunes Director:</p>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <h3>Title:</h3>
+            <img></img>
+            <p>iTunes Director:</p>
+          </div>
+        </div>
+        
+        <div class="column">
+          <div class="card">
+            <h3>Title:</h3>
+            <img></img>
+            <p>iTunes Director:</p>
+          </div>
+        </div>
+        
+        <div class="column">
+          <div class="card">
+            <h3>Title:</h3>
+           <img></img>
+            <p>iTunes Director:</p>
+          </div>
+        </div>
+      </div>
+
+    <!--Footer Section-->
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <h4>Take our Algorithm Survey:</h4>
+            <p>Did our recommendations suit you? Please rate: 1-5 Stars</p>
+                <form>
+                    <p>Please select your star rating:</p>
+                    <input type="radio" id="rating1" name="star" value="1">
+                    <label for="rating1">1 STAR</label>
+                    <input type="radio" id="rating2" name="star" value="2">
+                    <label for="rating2">2 STARS</label>
+                    <input type="radio" id="rating3" name="star" value="3">
+                    <label for="rating3">3 STARS</label>
+                    <input type="radio" id="rating4" name="star" value="4">
+                    <label for="rating4">4 STARS</label>
+                    <input type="radio" id="rating5" name="star" value="5">
+                    <label for="rating5">5 STARS</label>
+                    <br>
+                    <input type="submit" value="Submit">
+                </form>
+            <p>Ease of use: 1-5 Stars</p>
+                <form>
+                    <p>Please select your star rating:</p>
+                    <input type="radio" id="rating1" name="star" value="1">
+                    <label for="rating1">1 STAR</label>
+                    <input type="radio" id="rating2" name="star" value="2">
+                    <label for="rating2">2 STARS</label>
+                    <input type="radio" id="rating3" name="star" value="3">
+                    <label for="rating3">3 STARS</label>
+                    <input type="radio" id="rating4" name="star" value="4">
+                    <label for="rating4">4 STARS</label>
+                    <input type="radio" id="rating5" name="star" value="5">
+                    <label for="rating5">5 STARS</label>
+                    <br>
+                    <input type="submit" value="Submit">
+                </form>
+        </div>
+        <div class="content has-text-centered">
+            <h4>Contact Us:</h4>
+            <address>
+                Phone: 555.444.3333
+                Email: help@movieranker.com
+            </address>
+        </div>
+    </footer>
+    <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        
-        <script src="" async defer></script>
-    </body>
+
+    <script src="" async defer></script>
+</body>
+<div></div>
+
 </html>
