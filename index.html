@@ -29,9 +29,14 @@
     </header>
     <!--Search Genre Filter Dropdown Menu-->
     <div>
-        <input class=" userInput input is-small" type="text" placeholder="Text input">
-        <input class="button is-small" type="submit" value="Submit" onclick="test1(); test2(); test3()">
+        <span id="todo-search">
+        <input class=" userInput input is-small" type="text" placeholder="Text input" id="search-do">
+        <input class="button is-small" id="add-search-do" type="submit" value="Submit" onclick="test1(); test2(); test3()">
+        </span>
     </div>
+
+    <!-- This is where the Search history will go -->
+    <div id="to-search"></div>
 
     <!--Rating Selector-->
     <form>
@@ -121,6 +126,9 @@
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+
+            <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <script src="assets/java/script.js"></script>
 </body>

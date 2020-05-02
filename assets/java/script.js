@@ -6,6 +6,8 @@ ratingEl= document.querySelector('.ratings')
 directorEl= document.querySelector('.director')
 linktagEl = document.querySelector('.linktag')
 
+var search = JSON.parse(localStorage.getItem("todosearch")) || [];
+
 function test1() {
     fetch('https://www.omdbapi.com/?apikey=2acf9b30&t='  + userInputEl.value )
     .then(response => response.json())
@@ -56,3 +58,54 @@ function test3() {
         directorEl.innerHTML = director;
     });
     };
+
+//search history function
+function renderSearch(search) {
+    $("#to-search").empty(); // empties out the html
+
+    // render our searches to the page
+    for (var i = 0; i < search.length; i++) 
+    {
+      var toDoItem = $("<p>");
+      toDoItem.text(search[i]);
+
+      var toSearchClose = $("<button>");
+
+      toSearchClose.attr("data-search-do", i);
+      toSearchClose.addClass("checkbox");
+      toSearchClose.text("°");
+      toDoItem = toDoItem.prepend(toSearchClose);
+
+      $("#to-search").append(toDoItem);
+    }
+  }
+
+ 
+  $("#add-search-do").on("click", function(event) {
+    event.preventDefault();
+    var toDoTask = $("#search-do")
+      .val()
+      .trim();
+    search.push(toDoTask);
+
+    renderSearch(search);
+
+    localStorage.setItem("todosearch", JSON.stringify(search));
+
+    $("#search-do").val("");
+  });
+
+// click on cirle deletes search item
+  $(document).on("click", ".checkbox", function() {
+
+     var toDoNumber = $(this).attr("data-search-do");
+
+    search.splice(toDoNumber, 1);
+
+    renderSearch(search);
+
+    localStorage.setItem("todosearch", JSON.stringify(search));
+  });
+
+  // render search history on page
+  renderSearch(search);
