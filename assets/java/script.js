@@ -6,7 +6,18 @@ ratingEl= document.querySelector('.ratings')
 directorEl= document.querySelector('.director')
 linktagEl = document.querySelector('.linktag')
 
+var input = document.getElementById("search-do");
 var search = JSON.parse(localStorage.getItem("todosearch")) || [];
+
+// this eventlistener allows the user to submit a search with the "Enter" key
+input.addEventListener("keyup", function(event)
+    {
+        if (event.keyCode == 13)
+        {
+            event.preventDefault();
+            document.getElementById("add-search-do").click();
+        }
+    });
 
 function test1() {
     fetch('https://www.omdbapi.com/?apikey=2acf9b30&t='  + userInputEl.value )
