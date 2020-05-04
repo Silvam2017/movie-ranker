@@ -36,26 +36,31 @@
     </div>
 
     <!-- This is where the Search history will go -->
-   <div class="search-history column is-one-fourth">
+<div class="columns">
+   <div class="search-history column is-one-fifth">
      <div class="card">
        <div id="to-search"></div>
       </div>
   </div>
 
     <!--Movie Grid Column-->
-    <div class="movie-grid columns">
-        <div class="column is-three-fourths">
+    <div class="movie-grid">
+        <div class="column auto">
           <div class="card">
-            <div>
+            <div id="css-black">
             <h3 class="title"></h3>
             <a class="linktag" target="_blank"><img class="poster" onclick="bigTest()"></img></a>
             <p class="ratings"></p>
             <div class="director"></div>
           </div>
         </div>
-
+        </div>
+    </div>
+</div>
     <!--Footer Section-->
-    <button onclick="document.getElementById('theModal').style.display='block'">Open Modal</button>
+    <div id="modalbtn">
+    <button id="modalbtn" onclick="document.getElementById('theModal').style.display='block'">Open Modal</button>
+    </div>
     <div class="modal" id="theModal">
         <div class="modal-background"></div>
         <div class="modal-card">
