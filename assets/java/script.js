@@ -89,7 +89,7 @@ function renderSearch(search) {
     // Add a circle inside.
       var toSearchClose = $("<button>");
 
-      toSearchClose.attr("data-search-do", i);
+      toSearchClose.attr("data-search-do", [i]);
       toSearchClose.addClass("checkbox");
       toSearchClose.text("°");
 
