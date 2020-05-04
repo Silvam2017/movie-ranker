@@ -1,79 +1,96 @@
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: black
-  }
-  
-  .header {
-    padding: 20px;
-    text-align: center;
-    background: #e9385e;
-    color: white;
-    font-size: 30px;
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: black
+}
 
-  }
-  .nav {
-    color: white;
-    display: flex;
-    justify-content: space-around;
-  }
+.header {
+  padding: 20px;
+  text-align: center;
+  background-color: #e9385e;
+  color: white;
+  font-size: 30px;
 
-  .nav a {
-    display: inline;
-  }
-  
-  .input-container {
-    padding: 20px;
-    text-align: center;
-    background: black;
-  }
+}
+.nav {
+  color: white;
+  display: flex;
+  justify-content: space-around;
+}
 
-  .search-history {
-    text-align: left;
-    background: #e9385e;
-    color: white;
-    font-size: 16px;
-  }
-  .movie-grid {
-    text-align: right;
-    background:black;
-    color: white;
-    font-size: 16px;
-  }
+.nav a {
+  display: inline;
+}
 
-  .title {
-    background: #e9385e;
-    text-align: left;
-  }
-  .link-tag {
-    background: #e9385e;
-    text-align: center;
-  }
-  .poster {
-    background: #e9385e;
-    text-align: center;
-  }
-  .director {
-    background: #e9385e;
-    text-align: center;
-  }
+.input-container {
+  padding: 20px;
+  text-align: center;
+  background: black;
+}
 
-  .ratings {
-    background-color: #e9385e;
-    text-align: center;
-  }
+.search-history {
+  text-align: left;
+  background: #e9385e;
+  color: white;
+  font-size: 16px;
+}
+.movie-grid {
+  text-align: right;
+  background:black;
+  color: white;
+  font-size: 16px;
+}
 
-  .modal {    
-    padding: 16px;
-    text-align: center;
-    background: #e9385e;
-    color: white;
-    font-size: 16px;
-  }
+.title {
+  background: #e9385e;
+  text-align: left;
+  color: white;
+}
+.link-tag {
+  background: #e9385e;
+  text-align: center;
+}
+.poster {
+  background: #e9385e;
+  text-align: center;
+}
+.director {
+  background: #e9385e;
+  text-align: center;
+  color: white;
+}
 
-  .footer {
-    padding: 16px;
-    text-align: center;
-    background: #e9385e;
-    color: white;
-    font-size: 16px;
-  }
+.ratings {
+  background-color: #e9385e;
+  text-align: center;
+  color: white;
+}
+
+.modal {    
+  padding: 16px;
+  text-align: center;
+  background: #e9385e;
+  color: white;
+  font-size: 16px;
+}
+
+#modalbtn{
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.footer {
+  padding: 16px;
+  text-align: center;
+  background: #e9385e;
+  color: white;
+  font-size: 16px;
+}
+
+#css-black{
+  background-color: black;
+}
+
+#to-search{
+  background-color: #e9385e;
+}
