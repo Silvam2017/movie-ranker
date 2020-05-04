@@ -3,135 +3,124 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Movie Ranker</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <link rel="stylesheet" href='./assets/css/style.css'>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Movie Ranker</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.2/css/bulma.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+  <link rel="stylesheet" href='./assets/css/style.css'>
 </head>
 
 <body>
-    <!--Navigation Bar-->
-    <header>
-        <h1>
-            <nav>
-                <div class="topnav">
-                    <a class="active" href="#home">Movie Ranker</a>
-                    <a href="#movie-search">Movie Search</a>
-                    <a href="#contact">Contact</a>
-                    <a href="#survey">Survey</a>
-                  </div>
-            </nav>
-        </h1>
-    </header>
-    <!--Search Genre Filter Dropdown Menu-->
-    <div>
-        <span id="todo-search">
-        <input class=" userInput input is-small" type="text" placeholder="Text input" id="search-do">
-        <input class="button is-small" id="add-search-do" type="submit" value="Submit" onclick="test1(); test2(); test3()">
-        </span>
-    </div>
-
-    <!-- This is where the Search history will go -->
-    <div id="to-search"></div>
-
-    <!--Rating Selector-->
-    <form>
-        <p>Please select preferred rating:</p>
-        <input type="radio" id="rating1" name="star" value="1">
-        <label for="rating1">1 STAR</label>
-        <input type="radio" id="rating2" name="star" value="2">
-        <label for="rating2">2 STARS</label>
-        <input type="radio" id="rating3" name="star" value="3">
-        <label for="rating3">3 STARS</label>
-        <input type="radio" id="rating4" name="star" value="4">
-        <label for="rating4">4 STARS</label>
-        <input type="radio" id="rating5" name="star" value="5">
-        <label for="rating5">5 STARS</label>
-        <br>
-        <input type="submit" value="Submit">
-    </form>
-    <!--Movie Grid Columns-->
-    <div class="columns">
-        <div class="column">
-          <!-- <div class="card"> -->
-            <div>
-            <h3 class="title"></h3>
-            <a class="linktag" target="_blank"><img class="poster" onclick="bigTest()"></img></a>
-            <p class="ratings"></p>
-            <div class="director"></div>
-          </div>
+  <!--Navigation Bar-->
+  <header class="header">
+    <h1>
+      <nav class="nav">
+        <div class="topnav">
+          <a class="active" href="#home">Movie Ranker</a>
+          <a href="#movie-search">Movie Search</a>
+          <a href="#contact">Contact</a>
+          <a href="#survey">Survey</a>
         </div>
+      </nav>
+    </h1>
+  </header>
+  <!--Search Genre Filter Input Bar-->
+  <div class="input-container">
+    <span id="todo-search">
+      <input class=" userInput input is-small" type="text" placeholder="Text input" id="search-do">
+      <input class="button is-small is-danger is-outlined" id="add-search-do" type="submit" value="Submit"
+        onclick="test1(); test2(); test3()">
+    </span>
+  </div>
 
+  <!-- This is where the Search history will go -->
+  <div class="search-history column is-one-fourth">
+    <div class="card">
+      <div id="to-search"></div>
+    </div>
+  </div>
+
+  <!--Movie Grid Column-->
+  <div class="movie-grid column is-three-fourths">
+    <div class="column">
+      <div class="card">
+        <div>
+          <h3 class="title"></h3>
+          <a class="linktag" target="_blank"><img class="poster" onclick="bigTest()"></img></a>
+          <p class="ratings"></p>
+          <div class="director"></div>
+        </div>
+      </div>
+    </div>
     <!--Footer Section-->
     <button onclick="document.getElementById('theModal').style.display='block'">Open Modal</button>
     <div class="modal" id="theModal">
-        <div class="modal-background"></div>
-        <div class="modal-card">
-          <header class="modal-card-head">
-            <p class="modal-card-title">User Feedback Survey</p>
-            <button class="delete" aria-label="close"></button>
-          </header>
-          <section class="modal-card-body">
-            <!-- Content ... -->
-            <div class="content has-text-centered">
-                <p>Did our recommendations suit you? Please rate: 1-5 Stars</p>
-                    <form>
-                        <p>Please select your star rating:</p>
-                        <input type="radio" id="rating1" name="star" value="1">
-                        <label for="rating1">1 STAR</label>
-                        <input type="radio" id="rating2" name="star" value="2">
-                        <label for="rating2">2 STARS</label>
-                        <input type="radio" id="rating3" name="star" value="3">
-                        <label for="rating3">3 STARS</label>
-                        <input type="radio" id="rating4" name="star" value="4">
-                        <label for="rating4">4 STARS</label>
-                        <input type="radio" id="rating5" name="star" value="5">
-                        <label for="rating5">5 STARS</label>
-                        <br>
-                    </form>
-                    <br>
-                <p>Ease of use: 1-5 Stars</p>
-                    <form>
-                        <p>Please select your star rating:</p>
-                        <input type="radio" id="rating1" name="star" value="1">
-                        <label for="rating1">1 STAR</label>
-                        <input type="radio" id="rating2" name="star" value="2">
-                        <label for="rating2">2 STARS</label>
-                        <input type="radio" id="rating3" name="star" value="3">
-                        <label for="rating3">3 STARS</label>
-                        <input type="radio" id="rating4" name="star" value="4">
-                        <label for="rating4">4 STARS</label>
-                        <input type="radio" id="rating5" name="star" value="5">
-                        <label for="rating5">5 STARS</label>
-                        <br>
-                        <input type="submit" value="Submit">
-                    </form>
-            </div>
-          </section>
-          </footer>
-        </div>
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">User Feedback Survey</p>
+          <button class="delete" aria-label="close"></button>
+        </header>
+        <section class="modal-card-body">
+          <!-- Content ... -->
+          <div class="content has-text-centered">
+            <p>Did our recommendations suit you? Please rate: 1-5 Stars</p>
+            <form>
+              <p>Please select your star rating:</p>
+              <input type="radio" id="rating1" name="star" value="1">
+              <label for="rating1">1 STAR</label>
+              <input type="radio" id="rating2" name="star" value="2">
+              <label for="rating2">2 STARS</label>
+              <input type="radio" id="rating3" name="star" value="3">
+              <label for="rating3">3 STARS</label>
+              <input type="radio" id="rating4" name="star" value="4">
+              <label for="rating4">4 STARS</label>
+              <input type="radio" id="rating5" name="star" value="5">
+              <label for="rating5">5 STARS</label>
+              <br>
+            </form>
+            <br>
+            <p>Ease of use: 1-5 Stars</p>
+            <form>
+              <p>Please select your star rating:</p>
+              <input type="radio" id="rating1" name="star" value="1">
+              <label for="rating1">1 STAR</label>
+              <input type="radio" id="rating2" name="star" value="2">
+              <label for="rating2">2 STARS</label>
+              <input type="radio" id="rating3" name="star" value="3">
+              <label for="rating3">3 STARS</label>
+              <input type="radio" id="rating4" name="star" value="4">
+              <label for="rating4">4 STARS</label>
+              <input type="radio" id="rating5" name="star" value="5">
+              <label for="rating5">5 STARS</label>
+              <br>
+              <input type="submit" value="Submit">
+            </form>
+          </div>
+        </section>
       </div>
-        <div class="content has-text-centered">
-            <h4>Contact Us:</h4>
-            <address>
-                Phone: 555.444.3333
-                Email: help@movieranker.com
-            </address>
-        </div>
-    </footer>
+    </div>
+    
+<footer class="footer">
+      <div class="content has-text-centered">
+        <h4>Contact Us:</h4>
+        <address>
+          Phone: 555.444.3333
+          Email: help@movieranker.com
+        </address>
+      </div>
+</footer>
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-            <!-- jQuery -->
+    <!-- jQuery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <script src="assets/java/script.js"></script>
 </body>
-<div></div>
 
 </html>
