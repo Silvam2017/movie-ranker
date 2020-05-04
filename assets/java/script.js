@@ -6,7 +6,18 @@ ratingEl= document.querySelector('.ratings')
 directorEl= document.querySelector('.director')
 linktagEl = document.querySelector('.linktag')
 
+var input = document.getElementById("search-do");
 var search = JSON.parse(localStorage.getItem("todosearch")) || [];
+
+// this eventlistener allows the user to submit a search with the "Enter" key
+input.addEventListener("keyup", function(event)
+    {
+        if (event.keyCode == 13)
+        {
+            event.preventDefault();
+            document.getElementById("add-search-do").click();
+        }
+    });
 
 function test1() {
     fetch('https://www.omdbapi.com/?apikey=2acf9b30&t='  + userInputEl.value )
@@ -66,16 +77,26 @@ function renderSearch(search) {
     // render our searches to the page
     for (var i = 0; i < search.length; i++) 
     {
-      var toDoItem = $("<a>");
+
+      //create a new variable that will hold a <p> tag
+      // then set the add-search-do value as text to this <p> element 
+      var toDoItem = $("<p>");
       toDoItem.text(search[i]);
 
+
+    // Create a button with unique identifiers based on what number it is in the list.
+    // Give your button a data attribute called data-search-do and a class called "checkbox".
+    // Add a circle inside.
       var toSearchClose = $("<button>");
 
       toSearchClose.attr("data-search-do", [i]);
       toSearchClose.addClass("checkbox");
       toSearchClose.text("°");
+
+      //append the button to the to do item
       toDoItem = toDoItem.prepend(toSearchClose);
 
+    // add the button and the toDoItem to the to-search div in html
       $("#to-search").append(toDoItem);
 
     }
@@ -84,19 +105,26 @@ function renderSearch(search) {
  
   $("#add-search-do").on("click", function(event) {
     event.preventDefault();
+
+    // get value from textbox and store it as a variable
     var toDoTask = $("#search-do")
       .val()
       .trim();
+
+    // adding our new search-do to our local search and adding to local storage
     search.push(toDoTask);
 
+    //Update the to-search on the page
     renderSearch(search);
 
+    // save the to-search into local storage convert from an array into a string
     localStorage.setItem("todosearch", JSON.stringify(search));
 
+    //clear the textbox when done
     $("#search-do").val("");
   });
 
-// click on cirle deletes search item
+// clicking on cirle deletes search item
   $(document).on("click", ".checkbox", function() {
 
      var toDoNumber = $(this).attr("data-search-do");
