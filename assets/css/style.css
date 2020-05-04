@@ -1,54 +1,82 @@
-<<<<<<< HEAD
-=======
-*{
-
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: black
 }
 
-body{
-    
+.header {
+  padding: 20px;
+  text-align: center;
+  background: #e9385e;
+  color: white;
+  font-size: 30px;
+
 }
->>>>>>> 7cbdec7ceaf13a943876d15f180569e50ef6e6e3
-<<<<<<< HEAD
-* {
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  /* Float four columns side by side */
-  .column {
-    float: left;
-    width: 25%;
-    padding: 0 10px;
-  }
-  
-  /* Remove extra left and right margins, due to padding */
-  .row {margin: 0 -5px;}
-  
-  /* Clear floats after the columns */
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Responsive columns */
-  @media screen and (max-width: 600px) {
-    .column {
-      width: 100%;
-      display: block;
-      margin-bottom: 20px;
-    }
-  }
-  
-  /* Style the counter cards */
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 16px;
-    text-align: center;
-    background-color: #f1f1f1;
-  }
-=======
->>>>>>> master
+.nav {
+  color: white;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav a {
+  display: inline;
+}
+
+.input-container {
+  padding: 20px;
+  text-align: center;
+  background: black;
+}
+
+.search-history {
+  text-align: left;
+  background: #e9385e;
+  color: white;
+  font-size: 16px;
+}
+.movie-grid {
+  text-align: right;
+  background:black;
+  color: white;
+  font-size: 16px;
+}
+
+.title {
+  background: #e9385e;
+  text-align: left;
+  color: white;
+}
+.link-tag {
+  background: #e9385e;
+  text-align: center;
+}
+.poster {
+  background: #e9385e;
+  text-align: center;
+}
+.director {
+  background: #e9385e;
+  text-align: center;
+  color: white;
+}
+
+.ratings {
+  background-color: #e9385e;
+  text-align: center;
+  color: white;
+}
+
+.modal {    
+  padding: 16px;
+  text-align: center;
+  background: #e9385e;
+  color: white;
+  font-size: 16px;
+}
+
+.footer {
+  padding: 16px;
+  text-align: center;
+  background: #e9385e;
+  color: white;
+  font-size: 16px;
+}
