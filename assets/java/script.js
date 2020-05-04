@@ -66,17 +66,18 @@ function renderSearch(search) {
     // render our searches to the page
     for (var i = 0; i < search.length; i++) 
     {
-      var toDoItem = $("<p>");
+      var toDoItem = $("<a>");
       toDoItem.text(search[i]);
 
       var toSearchClose = $("<button>");
 
-      toSearchClose.attr("data-search-do", i);
+      toSearchClose.attr("data-search-do", [i]);
       toSearchClose.addClass("checkbox");
       toSearchClose.text("°");
       toDoItem = toDoItem.prepend(toSearchClose);
 
       $("#to-search").append(toDoItem);
+
     }
   }
 
