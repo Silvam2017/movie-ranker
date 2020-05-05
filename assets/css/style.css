@@ -1,9 +1,11 @@
 html, body {
   height: 100%;
+  background-color: black;
 }
 body {
   display: flex;
   flex-direction: column;
+  font-family: 'Great Vibes', cursive;
 }
 .content {
   flex: 1 0 auto;
@@ -22,7 +24,9 @@ body {
   text-align: center;
   color: white;
   font-size: 30px;
-  background-image: url("/assets/images/theatre.jpg");
+  background: #e9385e;
+  background-image: url(../images/movie-theater.jpg);
+  background-position: center;
 }
 .nav {
   color: white;
