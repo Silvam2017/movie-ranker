@@ -7,6 +7,7 @@ directorEl= document.querySelector('.director')
 linktagEl = document.querySelector('.linktag')
 
 var input = document.getElementById("search-do");
+var input2 =document.getElementById("to-search");
 var search = JSON.parse(localStorage.getItem("todosearch")) || [];
 
 // this eventlistener allows the user to submit a search with the "Enter" key
