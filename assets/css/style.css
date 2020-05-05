@@ -50,6 +50,7 @@ body {
   color: white;
   font-size: 16px;
 }
+
 .movie-grid {
   text-align: right;
   background:black;
@@ -59,9 +60,14 @@ body {
 
 .title {
   background: #e9385e;
-  text-align: left;
+  text-align: center;
+  color: white;
+  border-radius: 7px;
+}
+h3.title{
   color: white;
 }
+
 .link-tag {
   background: #e9385e;
   text-align: center;
@@ -74,12 +80,14 @@ body {
   background: #e9385e;
   text-align: center;
   color: white;
+  border-radius: 7px;
 }
 
 .ratings {
   background-color: #e9385e;
   text-align: center;
   color: white;
+  border-radius: 7px;
 }
 
 .modal {    
@@ -110,4 +118,9 @@ body {
 
 #to-search{
   background-color: #e9385e;
+}
+
+.search-history{
+  background-image: url(../images/popcorn-bucket-with-red-background_23-2148425093.jpg);
+  background-position: center;
 }
