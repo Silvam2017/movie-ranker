@@ -40,11 +40,18 @@ body {
   background: black;
 }
 
+.userInput {
+  background-color: #e9385e;
+  border-radius: 5px;
+  border-color: #e9385e;
+}
+
 .search-history {
   text-align: left;
   background: #e9385e;
   color: white;
   font-size: 16px;
+  border-radius: 10px;
 }
 .movie-grid {
   text-align: right;
@@ -57,6 +64,8 @@ body {
   background: #e9385e;
   text-align: left;
   color: white;
+  border-radius: 10px;
+  text-align: center;
 }
 .link-tag {
   background: #e9385e;
@@ -70,12 +79,14 @@ body {
   background: #e9385e;
   text-align: center;
   color: white;
+  border-radius: 10px;
 }
 
 .ratings {
   background-color: #e9385e;
   text-align: center;
   color: white;
+  border-radius: 10px;
 }
 
 .modal {    
