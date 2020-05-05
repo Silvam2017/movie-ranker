@@ -1,10 +1,11 @@
 
-userInputEl = document.querySelector('.userInput')
-titleEl= document.querySelector('.title')
-posterEl= document.querySelector('.poster')
-ratingEl= document.querySelector('.ratings')
-directorEl= document.querySelector('.director')
-linktagEl = document.querySelector('.linktag')
+userInputEl = document.querySelector('.userInput');
+titleEl= document.querySelector('.title');
+posterEl= document.querySelector('.poster');
+ratingEl= document.querySelector('.ratings');
+directorEl= document.querySelector('.director');
+linktagEl = document.querySelector('.linktag');
+guardianEl = document.querySelector('.guard-list');
 
 var input = document.getElementById("search-do");
 var search = JSON.parse(localStorage.getItem("todosearch")) || [];
@@ -54,9 +55,22 @@ function test2() {
     
     fetch('https://content.guardianapis.com/search?q=' + userInputEl.value + '&api-key=4298cb73-e3b3-4b9c-8183-aeceb09d2290')
     .then(response => response.json())
-    .then(data =>
-        console.log(data))
-}
+    .then(data =>{
+        console.log(data)
+        var list = data['response']['results']
+        var guardianTitle = $('<h2>');
+        for(i = 0; i < list.length; i++){
+        var title = data['response']['results'][i]['webTitle']
+        console.log(title)
+        var previousSerchEl = $('<li>'); 
+        previousSerchEl.text( title )
+        $('.guard-list').append(previousSerchEl)
+       }
+       guardianTitle.text("Checkout The Guardian for these articles that include your search word.")
+       $('.guardian-title').append(guardianTitle)
+       //guardianTitle.setAttribute("src", "https://www.theguardian.com/us")
+    });
+};
 
 
 function test3() {
