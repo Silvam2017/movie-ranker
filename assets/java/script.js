@@ -97,7 +97,7 @@ function renderSearch(search) {
 
       //create a new variable that will hold a <p> tag
       // then set the add-search-do value as text to this <p> element 
-      var toDoItem = $("<p>");
+      var toDoItem = $("<h4>");
       toDoItem.text(search[i]);
 
 
