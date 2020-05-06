@@ -64,10 +64,15 @@ function test2() {
         var guardianTitle = $('<h2>');
         for(i = 0; i < list.length; i++){
         var title = data['response']['results'][i]['webTitle']
-        console.log(title)
+        var url = data['response']['results'][i]['webUrl']
+        console.log(url)
         var previousSerchEl = $('<li>'); 
+        var linkClicker = $('<a href = ' + url + '>Click Here</a>')
         previousSerchEl.text( title )
         $('.guard-list').append(previousSerchEl)
+        $('.guard-list').append(linkClicker)
+       
+
        }
        guardianTitle.text("Checkout The Guardian for these articles that include your search word.")
        $('.guardian-title').append(guardianTitle)
