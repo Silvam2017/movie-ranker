@@ -116,11 +116,13 @@ h3.title{
   background-color: black;
 }
 
-#to-search{
-  background-color: #e9385e;
-}
+
 
 .search-history{
   background-image: url(../images/popcorn-bucket-with-red-background_23-2148425093.jpg);
   background-position: center;
+}
+
+.card {
+  background-color: transparent;
 }
