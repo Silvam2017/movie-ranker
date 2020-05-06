@@ -82,7 +82,7 @@ function renderSearch(search) {
       // then set the add-search-do value as text to this <p> element 
       var toDoItem = $("<p>");
       toDoItem.text(search[i]);
-
+     // toDoItem.onClick(test1(); test2(); test3());
 
     // Create a button with unique identifiers based on what number it is in the list.
     // Give your button a data attribute called data-search-do and a class called "checkbox".
