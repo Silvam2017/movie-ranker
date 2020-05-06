@@ -98,6 +98,7 @@ function renderSearch(search) {
       //create a new variable that will hold a <p> tag
       // then set the add-search-do value as text to this <p> element 
       var toDoItem = $("<h4>");
+      toDoItem.addClass("dynamic-click")
       toDoItem.text(search[i]);
 
 
@@ -108,16 +109,15 @@ function renderSearch(search) {
 
       toSearchClose.attr("data-search-do", [i]);
       toSearchClose.addClass("checkbox");
-      toSearchClose.text("°");
+      toSearchClose.text("");
 
       //append the button to the to do item
       toDoItem = toDoItem.prepend(toSearchClose);
 
     // add the button and the toDoItem to the to-search div in html
       $("#to-search").append(toDoItem);
-
     }
-  }
+  };
 
  
   $("#add-search-do").on("click", function(event) {
@@ -155,3 +155,14 @@ function renderSearch(search) {
 
   // render search history on page
   renderSearch(search);
+
+  $( "#to-search" ).on( "click", "h4", function( event ) {
+    event.preventDefault();
+   clickEl = document.querySelector('.dynamic-click')
+  userInputEl.value = $(this).text()
+  test1();
+  test2();
+  test3();
+  bigTest();
+  
+  });
