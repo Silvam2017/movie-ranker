@@ -59,7 +59,7 @@ body {
 }
 
 .title {
-  background: #e9385e;
+  background: rgb(203,14,14);
   text-align: center;
   color: white;
   border-radius: 7px;
@@ -77,14 +77,14 @@ h3.title{
   text-align: center;
 }
 .director {
-  background: #e9385e;
+  background: rgb(203,14,14);
   text-align: center;
   color: white;
   border-radius: 7px;
 }
 
 .ratings {
-  background-color: #e9385e;
+  background-color: rgb(203,14,14);
   text-align: center;
   color: white;
   border-radius: 7px;
