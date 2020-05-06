@@ -123,4 +123,5 @@ h3.title{
 
 .card {
   background-color: transparent;
+  box-shadow: none;
 }
