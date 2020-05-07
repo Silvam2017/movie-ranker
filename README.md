@@ -23,7 +23,7 @@
 
 
 ### Contributors
-*Meridith Black
+*Meredith Black
 *John Ryan
 *Michael Silva
 *Israel Berlanga
