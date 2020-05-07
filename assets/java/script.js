@@ -1,4 +1,4 @@
-
+//global variables attached to their HTML counterparts
 userInputEl = document.querySelector('.userInput');
 titleEl= document.querySelector('.title');
 posterEl= document.querySelector('.poster');
@@ -21,6 +21,8 @@ input.addEventListener("keyup", function(event)
         }
     });
 
+
+//This function pulls the title, rating, poster image, and the youtube link from the IMDB fetch.
 function test1() {
     fetch('https://www.omdbapi.com/?apikey=2acf9b30&t='  + userInputEl.value )
     .then(response => response.json())
@@ -30,7 +32,8 @@ function test1() {
         var score = data['Ratings'][1]['Value'];
         var poster = data['Poster']
         var youtube = data['imdbID']
-
+        
+        //setting the fetch calls to html elements
         titleEl.innerHTML = title;
         ratingEl.innerHTML = 'Rotten Tomatoes: ' + score;
         posterEl.setAttribute('src', poster)
@@ -40,7 +43,8 @@ function test1() {
 };
 
 
-
+//this function takes the youtube link ID from the IMDB fetch in test1 and makes another fetch
+//to IMDB to access the youtube link.
 function bigTest(){
     console.log('howdily doodily')
     fetch('https://imdb-api.com/en/API/YouTubeTrailer/k_xGWs0T08/' + newPosterlink)
@@ -52,8 +56,11 @@ function bigTest(){
     })
 }
 
+
+//This calls the guardian api with the searchword added by the user and filtered through the guardians tag film/films. From there the data arrives as an array
+//a for loop accesses each of the article titles in the array as well as their respective links. The information is then assigned to a <li> with an <a> tag
+//for the link and is dynamically generated when the user enters the title they wish to see.
 function test2() {
-    
     fetch('https://content.guardianapis.com/search?q=' + userInputEl.value + '&format=json&tag=film/film,tone/reviews&api-key=4298cb73-e3b3-4b9c-8183-aeceb09d2290')
     .then(response => response.json())
     .then(data =>{
@@ -73,14 +80,14 @@ function test2() {
         $('.guard-list').append(linkClicker)
        
 
-       }
+    }
        guardianTitle.text("Checkout The Guardian for these articles that include your search word.")
        $('.guardian-title').append(guardianTitle)
-       //guardianTitle.setAttribute("src", "https://www.theguardian.com/us")
     });
 };
 
 
+//Simple fetch call to grab the Director's name of any movie searched for by the user. 
 function test3() {
     fetch('https://itunes.apple.com/search?term=' + userInputEl.value + '&entity=movie')
     
@@ -161,6 +168,10 @@ function renderSearch(search) {
   // render search history on page
   renderSearch(search);
 
+//this event listener is set to the parent element of each title the user saves to local storage, since the elements are dynamically generated the program
+//cannot assign a listener to an item that doesnt exist on the page on load, this way wach time a new movie is added to local it is assigned an on-click
+//event via its parent element. Once the click event is fired the user inputs saved movie fires each of the fetch functions again, bringing the user back
+//to that movies information.
   $( "#to-search" ).on( "click", "h4", function( event ) {
     event.preventDefault();
    clickEl = document.querySelector('.dynamic-click')
