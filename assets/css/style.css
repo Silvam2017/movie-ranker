@@ -10,9 +10,6 @@ body {
 .content {
   flex: 1 0 auto;
 }
-.footer {
-  flex-shrink: 0;
-}
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -28,6 +25,13 @@ body {
   background-image: url(../images/movie-theater.jpg);
   background-position: center;
 }
+
+.titleText {
+  background: transparent;
+  color: white;
+  
+}
+
 .nav {
   color: white;
   display: flex;
@@ -51,12 +55,6 @@ body {
   font-size: 16px;
 }
 
-.movie-grid {
-  text-align: right;
-  background:black;
-  color: white;
-  font-size: 16px;
-}
 
 .title {
   background: #e9385e;
@@ -64,7 +62,37 @@ body {
   color: white;
   border-radius: 7px;
 }
+
+.movie-grid {
+  text-align: right;
+  background:black;
+  color: white;
+  font-size: 16px;
+}
+
 h3.title{
+  font-family: 'Satisfy', cursive;
+  font-size: larger;
+  font-weight: 800;
+  color: white;
+}
+
+h4.titleText{
+  color: white;
+  font-family: 'Satisfy', cursive;
+}
+
+p.ratings{
+  font-family: 'Satisfy', cursive;
+  font-size: larger;
+  font-weight: 800;
+  color: white;
+}
+
+div.director{
+  font-family: 'Satisfy', cursive;
+  font-size: larger;
+  font-weight: 800;
   color: white;
 }
 
@@ -72,10 +100,28 @@ h3.title{
   background: #e9385e;
   text-align: center;
 }
+
+input#add-search-do.button.is-small{
+  font-family: 'Satisfy', cursive;
+  font-size: larger;
+  font-weight: 800;
+  color: white;
+  background-color: red;
+  border-color: red;
+}
+
+h4.dynamic-click{
+  
+  font-weight: 800;
+  font-size: large;
+  color: black;
+}
+
 .poster {
   background: #e9385e;
   text-align: center;
 }
+
 .director {
   background: #e9385e;
   text-align: center;
@@ -88,6 +134,14 @@ h3.title{
   text-align: center;
   color: white;
   border-radius: 7px;
+}
+
+div.guardian.column.is-two-fifths{
+  color: white;
+}
+
+.guard-list{
+  color: white;
 }
 
 .modal {    
@@ -104,6 +158,34 @@ h3.title{
   align-items: center;
 }
 
+#css-black{
+  background-color: black;
+}
+
+.search-history{
+  background-image: url(../images/popcorn-bucket-with-red-background_23-2148425093.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.card {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+button#modalbtn{
+  font-family: 'Satisfy', cursive;
+  font-size: larger;
+  font-weight: 800;
+  color: white;
+  background-color: red;
+  border-color: red;
+}
+
+.footer {
+  flex-shrink: 0;
+}
+
 .footer {
   padding: 16px;
   text-align: center;
@@ -112,16 +194,7 @@ h3.title{
   font-size: 16px;
 }
 
-#css-black{
-  background-color: black;
-}
-
-.search-history{
-  background-image: url(../images/popcorn-bucket-with-red-background_23-2148425093.jpg);
-  background-position: center;
-}
-
-.card {
-  background-color: transparent;
-  box-shadow: none;
+h4.footerNote{
+  color: white;
+  font-family: 'Satisfy', cursive;
 }
