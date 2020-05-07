@@ -24,7 +24,7 @@ input.addEventListener("keyup", function(event)
 
 //This function pulls the title, rating, poster image, and the youtube link from the IMDB fetch.
 function test1() {
-    fetch('https://www.omdbapi.com/?apikey=2acf9b30&t='  + userInputEl.value )
+    fetch('https://www.omdbapi.com/?apikey=6907af5c&t='  + userInputEl.value )
     .then(response => response.json())
     .then(data => {
         console.log(data)
@@ -47,7 +47,7 @@ function test1() {
 //to IMDB to access the youtube link.
 function bigTest(){
     console.log('howdily doodily')
-    fetch('https://imdb-api.com/en/API/YouTubeTrailer/k_xGWs0T08/' + newPosterlink)
+    fetch('https://imdb-api.com/en/API/YouTubeTrailer/6907af5c/' + newPosterlink)
     .then(response => response.json())
     .then(data => {
         console.log(data)
