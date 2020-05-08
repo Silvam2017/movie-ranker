@@ -47,7 +47,7 @@ function test1() {
 //to IMDB to access the youtube link.
 function bigTest(){
     console.log('howdily doodily')
-    fetch('https://imdb-api.com/en/API/YouTubeTrailer/6907af5c/' + newPosterlink)
+    fetch('https://imdb-api.com/en/API/YouTubeTrailer/k_fmLgw921/' + newPosterlink)
     .then(response => response.json())
     .then(data => {
         console.log(data)
